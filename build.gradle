@@ -8,7 +8,10 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.1'
-        
+        //protobuf support
+       // classpath "com.google.protobuf:protobuf-gradle-plugin:$PROTOBUF_VERSION"
+        //Google services
+        classpath 'com.google.gms:google-services:4.1.0'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -24,4 +27,23 @@ allprojects {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+// Define versions in a single place
+ext {
+    // app version
+    versionCode = 1
+    versionName = '1.0'
+
+    // Sdk and tools
+    minSdkVersion = 19
+    targetSdkVersion = 28
+    compileSdkVersion = 28
+    buildToolsVersion = '28.0.1'
+
+    // butterknife version
+    BUTTERKNIFE_VERSION = '8.4.0'
+
+    // protobuf Version
+    PROTOBUF_VERSION = '0.8.3'
 }
