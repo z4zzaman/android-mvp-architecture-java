@@ -14,6 +14,7 @@ package com.monir.framework.mvp.baseapplication.data.local.task;
  */
 
 import android.arch.lifecycle.LiveData;
+import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Query;
 
 import com.monir.framework.mvp.baseapplication.data.local.base.BaseDao;
@@ -21,6 +22,7 @@ import com.monir.framework.mvp.baseapplication.data.local.dbhelper.TableNames;
 
 import java.util.List;
 
+@Dao
 public interface TaskDao extends BaseDao<TaskEntity> {
     // Select all from TaskEntity table and order by "complete by" date
     //@Query("SELECT * FROM " + TableNames. TASK_TABLE + " ORDER By id")

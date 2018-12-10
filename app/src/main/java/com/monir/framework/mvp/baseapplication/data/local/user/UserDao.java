@@ -14,6 +14,7 @@ package com.monir.framework.mvp.baseapplication.data.local.user;
  */
 
 import android.arch.lifecycle.LiveData;
+import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Query;
 
 import com.monir.framework.mvp.baseapplication.data.local.base.BaseDao;
@@ -22,6 +23,7 @@ import com.monir.framework.mvp.baseapplication.data.local.dbhelper.TableNames;
 
 import java.util.List;
 
+@Dao
 public interface UserDao extends BaseDao<UserEntity> {
     @Query("SELECT * FROM " + TableNames.USERS)
     List<UserEntity> getAllUser();
