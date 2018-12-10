@@ -1,4 +1,4 @@
-package com.monir.framework.mvp.ui.base;
+package com.monir.framework.mvp.baseapplication.ui.base;
 
 import android.arch.lifecycle.ViewModel;
 

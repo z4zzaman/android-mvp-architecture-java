@@ -1,7 +1,7 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
-    
+
     repositories {
         google()
         jcenter()
@@ -9,7 +9,7 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.1'
         //protobuf support
-       // classpath "com.google.protobuf:protobuf-gradle-plugin:$PROTOBUF_VERSION"
+        // classpath "com.google.protobuf:protobuf-gradle-plugin:$PROTOBUF_VERSION"
         //Google services
         classpath 'com.google.gms:google-services:4.1.0'
 
@@ -40,10 +40,20 @@ ext {
     targetSdkVersion = 28
     compileSdkVersion = 28
     buildToolsVersion = '28.0.1'
-
     // butterknife version
     BUTTERKNIFE_VERSION = '8.4.0'
-
     // protobuf Version
     PROTOBUF_VERSION = '0.8.3'
+    // lifecycle-extension version
+    LIFECYCLE_VERSION = '1.1.1'
+    // room database version
+    room = "1.1.0"
+    // glide version
+    glide = "3.7.0"
+    //database reader inappstorage version
+    in_app_reader = "1.0.2"
+    //calligraphy version
+    calligraphy = "2.3.0"
+    //leakcanary version (debug only)
+    leakcanary = "1.5.4"
 }
