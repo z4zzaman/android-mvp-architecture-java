@@ -15,6 +15,8 @@ package com.monir.framework.mvp.baseapplication.ui.base;
 
 import android.arch.lifecycle.LifecycleRegistry;
 import android.arch.lifecycle.ViewModelProviders;
+import android.content.Context;
+import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.os.Build;
@@ -143,7 +145,15 @@ public abstract class BaseActivity<V extends MvpView, P extends BasePresenter<V>
             presenter.detachView();
         }
     }
+    @Override
+    public void onClick(View view) {
 
+    }
+
+    @Override
+    public void onFocusChange(View view, boolean b) {
+
+    }
 
     private void updateLayoutView(int layoutId) {
         try {
@@ -281,13 +291,19 @@ public abstract class BaseActivity<V extends MvpView, P extends BasePresenter<V>
      * */
     protected abstract void stopUI();
 
-    @Override
-    public void onClick(View view) {
-
+    /*
+     * Return current viewDataBinding
+     * */
+    protected ViewDataBinding getViewDataBinding() {
+        return mViewDataBinding;
     }
 
-    @Override
-    public void onFocusChange(View view, boolean b) {
-
+    /*
+     * Start Activity with intent
+     * */
+    protected static void runCurrentActivity(Context context, Intent intent) {
+        context.startActivity(intent);
     }
+
+
 }
